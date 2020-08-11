@@ -2,7 +2,7 @@
 	padding: 0;
 	margin:0;
 	box-sizing: border-box;
-
+	
 
 }
 
@@ -14,6 +14,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	background-color:#000;
+	color:#fff; 
+	font-family: 'Press Start 2P', cursive;
 }
 
 
@@ -22,12 +25,84 @@ body {
 
 	width: 900px;
 	height: 600px;
-	border:1px solid black;
+	border:1px solid #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 }
+
+.main-title {
+
+	width: 600px;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 50px;
+	position: relative;
+
+
+}
+
+
+.main-title .text {
+	margin-top: 15px;
+	border:5px solid #fff;
+
+}
+
+
+.menu {
+	
+	width: 900px;
+	height: 300px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	/*border:5px solid #fff;*/
+	margin-bottom: 15px;
+}
+
+
+.snake img {
+
+	position:absolute;
+	top:0;
+	left: 0;
+	animation:snake 5s linear infinite normal;
+	
+}
+
+
+@keyframes snake {
+	
+	0% {transform: translateX(0);}
+
+	50% {transform: translateX(80%);}
+
+	51%{display:none; }
+
+	99%{display:initial;}
+	
+	100% {transform: translateX(0);}
+}
+
+
 
 
 i {
 
 	font-size: 100px;
+
+}
+
+
+
+.menu .selector:hover {
+	background-color: rgba(79, 79, 79, 1);
+	cursor:pointer;
+
 }
